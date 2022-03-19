@@ -1,1 +1,57 @@
-<p>text-ticker works!</p>
+
+<div class="row">
+    <div class="col">
+        <div class="col">
+            <textarea name="txtContent" (change)="doTextareaValueChange($event)" cols="30" rows="10">{{inputText}}</textarea>
+        </div>    
+    </div>
+    <div class="col">
+        <div class="container">
+            <div class="row">
+                <div class="col">Number of words:</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a (click)="increaseNumberOfWords()" class="btn btn-info">Up</a>
+                </div>
+                <div class="col">
+                    <span class="badge bg-secondary">{{numberOfWords}}</span>
+                </div>
+                <div class="col">
+                    <a (click)="decreaseNumberOfWords()" class="btn btn-info">Down</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">Words Per Minute:</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a (click)="increaseWpm()" class="btn btn-info">Up</a>
+                </div>
+
+                <div class="col">
+                    <span class="badge bg-secondary">{{wordsPerMinute}}</span>
+                </div>
+                <div class="col">
+                    <a (click)="decreaseWpm()" class="btn btn-info">Down</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <a (click)="scrollText()" class="btn btn-info">Start</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <h1 class="fs-1">
+            {{currentText}}
+        </h1>
+    </div>
+    
+</div>
